@@ -11,7 +11,7 @@ function MenuDataService($http) {
     service.getAllCategories = function () {
         var response = $http({
             method: "GET",
-            url: "http://davids-restaurant.herokuapp.com/categories.json"
+            url: "https://davids-restaurant.herokuapp.com/categories.json"
         });
         return response;
     };
@@ -19,7 +19,7 @@ function MenuDataService($http) {
     service.getItemsForCategory = function (categoryShortName) {
         var response = $http({
             method: "GET",
-            url: "http://davids-restaurant.herokuapp.com/menu_items.json?category=",
+            url: "https://davids-restaurant.herokuapp.com/menu_items.json?category=",
             params: {
                 category: categoryShortName
             }
